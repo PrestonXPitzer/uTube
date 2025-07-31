@@ -1,0 +1,5 @@
+venv
+eel_fsm_app/ffmpeg.exe
+eel_fsm_app/ffplay.exe
+eel_fsm_app/ffprobe.exe
+eel_fsm_app/geckodriver.exe

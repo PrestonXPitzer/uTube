@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FSM UI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/eel.js"></script>
+  <script src="fsm.js" defer></script>
+</head>
+<body>
+
+  <div id="splash" class="screen">
+    <div class="logo">μTube</div>
+  </div>
+
+  <div id="search" class="screen hidden">
+    <div class="logo">μTube</div>
+    <input position="centered" id="search_text" type="text" placeholder="Search..." />
+    <button onclick="executeSearch()">Search</button>
+  </div>
+
+  <div id="result" class="screen hidden">
+    <button onclick="goBack()">Back</button>
+    <div class="logo">μTube</div>
+    <div class="result-list">
+      <!-- Populated dynamically -->
+      <div class="result-header">
+        <span>Boobs in the Sex House??? GUH!!!!</span>
+        <span>Description</span>
+        <button id="VideoButton">Video</button>
+        </div>
+      </div>
+  </div>
+
+  <div id="playback" class="screen hidden">
+    <button onclick="goBack()">Back</button>
+    <div class="logo">μTube</div>
+    <div class="video-player">[Embedded HTML5 Video]</div>
+    <div>
+      <span id="vidTitle">Title</span>
+      <button>Download</button>
+    </div>
+  </div>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("VideoButton").addEventListener("click", playVideo);
+  });
+</script>
+
+</html>
